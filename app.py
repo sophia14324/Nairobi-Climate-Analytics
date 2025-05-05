@@ -9,7 +9,7 @@ import osmnx as ox
 import folium
 from streamlit_folium import st_folium
 
-AQICN_TOKEN = ""
+AQICN_TOKEN = "2aafeac7357444178a60a4f2d2e407f4d82db2d1"
 LOCATION = "Nairobi"
 
 st.set_page_config(page_title="Urban Climate Watch: Nairobi", layout="wide")
@@ -46,7 +46,7 @@ params = {
 }
 
 temp_api = "https://archive-api.open-meteo.com/v1/archive"
-res = requests.get(temp_api, params=params)
+res = requests.get(temp_api, params=params, timeout=10)
 data = res.json()
 
 if "hourly" in data:
@@ -61,7 +61,7 @@ st.subheader("🌿 Nairobi Green Spaces")
 
 with st.spinner("Loading green zones..."):
     tags = {"leisure": "park"}
-    graph = ox.geometries_from_place("Nairobi, Kenya", tags=tags)
+    graph = ox.features_from_place("Nairobi, Kenya", tags=tags)
     parks = graph[["geometry"]].dropna()
 
     m = folium.Map(location=[-1.2921, 36.8219], zoom_start=12)
