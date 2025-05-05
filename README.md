@@ -15,4 +15,5 @@ pip install streamlit pandas requests plotly osmnx folium streamlit-folium
 
 streamlit run app.py
 
-![Output](media\Output.gif)
+
+![Output](media\https://github.com/sophia14324/Nairobi-Climate-Analytics/blob/main/media/Output.gif)
