@@ -9,3 +9,7 @@
 🔍 Insights: Correlation between temperature spikes and AQI
 
 📊 Monthly and daily breakdowns
+
+### Run
+pip install streamlit pandas requests plotly osmnx folium streamlit-folium
+streamlit run app.py
