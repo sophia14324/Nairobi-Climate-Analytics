@@ -9,7 +9,7 @@ import osmnx as ox
 import folium
 from streamlit_folium import st_folium
 
-AQICN_TOKEN = "2aafeac7357444178a60a4f2d2e407f4d82db2d1"
+AQICN_TOKEN = ""
 LOCATION = "Nairobi"
 
 st.set_page_config(page_title="Urban Climate Watch: Nairobi", layout="wide")
