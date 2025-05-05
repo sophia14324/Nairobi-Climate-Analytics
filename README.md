@@ -14,4 +14,4 @@
 pip install streamlit pandas requests plotly osmnx folium streamlit-folium
 streamlit run app.py
 
-![Output](media\output.gif)
+![Output](media\Output.gif)
